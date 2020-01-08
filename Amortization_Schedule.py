@@ -1,6 +1,4 @@
-import pandas as pd
 import numpy as np
-
 
 def amortization(loan,rate,tenure,terminate):
 
