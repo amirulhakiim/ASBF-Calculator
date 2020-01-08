@@ -3,10 +3,6 @@ import numpy as np
 
 
 def amortization(loan,rate,tenure,terminate):
-    #loan = 200000
-    #rate = 4.75
-    #tenure = 40
-    #terminate = 5
 
     per = np.arange(tenure*12) + 1
     per_terminate = np.arange(terminate*12) + 1
@@ -19,16 +15,8 @@ def amortization(loan,rate,tenure,terminate):
     for payment in per_terminate:
         index = payment - 1
         loan = loan + ppmt[index]
-        #print(fmt.format(payment, ppmt[index], ipmt[index], loan))
+        print(fmt.format(payment, ppmt[index], ipmt[index], loan))
 
     return loan,pmt
 
-# loan = 200000
-# rate = 4.75
-# tenure = 40
-# terminate = 5
-
-# loan,pmt = amortization(loan,rate,tenure,terminate)
-
-# print(loan)
-# print(pmt)
+loan,pmt = amortization(200000,4.75,40,5)
