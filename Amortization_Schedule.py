@@ -10,7 +10,7 @@ def amortization(loan,rate,tenure,terminate):
     pmt = np.pmt((rate/100)/12, tenure*12, loan)
 
     balance = []
-    fmt = '{0:2d} {1:8.2f} {2:8.2f} {3:8.2f}'
+    #fmt = '{0:2d} {1:8.2f} {2:8.2f} {3:8.2f}'
     for payment in per_terminate:
         index = payment - 1
         loan = loan + ppmt[index]
